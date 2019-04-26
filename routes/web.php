@@ -11,11 +11,21 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+//Route::get('/', 'PagesController@index');
+Route::get('/', 'HomeController@index');
+//Route::get('/about', 'PagesController@about');
+Route::get('/projects', 'ProjectsController@index');
+
 
 Route::resource('post','PostController');
+Route::resource('projects','ProjectsController');
+//Route::resource('home','HomeController');
+
+Route::get('/home_edit','HomeController@home_edit');
+Route::put('/home_update','HomeController@update');
+Route::get('/home_create', 'HomeController@create');
+Route::put('/home_create_template', 'HomeController@store');
+
 
 Auth::routes();
 

@@ -18,7 +18,7 @@ class PagesController extends Controller
 
     public function services(){
         $data = array(
-            'title' => 'Services',
+            'title' => 'Projects',
             'services' => ['Web design', 'Programming', 'Blockchain']
         );
         return view('pages.services')->with($data);

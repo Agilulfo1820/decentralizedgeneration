@@ -49244,6 +49244,19 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/_custom.js":
+/*!*********************************!*\
+  !*** ./resources/js/_custom.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $("#app").css("min-height", $(window).height() - $("#contact").height() - $(".main-footer").height());
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -49257,6 +49270,8 @@ module.exports = function(module) {
  * building robust, powerful web applications using Vue and Laravel.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+__webpack_require__(/*! ./_custom */ "./resources/js/_custom.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
